@@ -122,7 +122,7 @@ function App() {
     <>
       <section><h2>Anotador de Truco</h2><hr /></section>
       <section>
-        {ganador && <h3>{ganador} ganaron!</h3>}
+        {ganador && <h3>{ganador} { ganador == 'Nosotros' ? 'ganamos' : 'ganaron' }!</h3>}
         <div className="row">
           <div className="col">
             <h4>Nosotros</h4>
