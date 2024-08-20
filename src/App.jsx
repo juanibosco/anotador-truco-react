@@ -147,7 +147,7 @@ function App() {
         </div>
         <div className="row">
           <div className="col">
-            <button 
+            <button style={{ backgroundColor: '#1fcf00' }} 
               onClick={() => handlePuntosChange('nosotros', 1)} 
               disabled={ganador}
             >
