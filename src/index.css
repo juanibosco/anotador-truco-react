@@ -1,0 +1,176 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section{
+  margin-top: 50px;
+}
+
+button{
+  margin-top: 25px;
+  padding: 10px;
+  min-width: 50px;
+  
+}
+
+.row{
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 80px;
+}
+
+.col{
+  column-gap: 60px;
+}
+
+.board {
+  min-height: 250px;
+  width: 100px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: flex-start;  /* Alinea el contenido al inicio (arriba) */
+  align-items: center;
+  flex-direction: column;  /* Apila las cerillas verticalmente */
+  padding-top: 10px;  /* Opcional: un pequeño padding superior para espacio */
+}
+.cerilla-group {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+.cerilla {
+  position: absolute;
+  background-color: #F5DEB3; /* Color similar al de la cerilla */
+  width: 4px;
+}
+
+.cerilla1 {
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.cerilla2 {
+  width: 100%;
+  height: 4px;
+  top: 0;
+  left: 0;
+}
+
+.cerilla3 {
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.cerilla4 {
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+}
+
+.cerilla5 {
+  width: 120%;
+  height: 4px;
+  transform: rotate(45deg);
+  top: 2px;
+  left: 4px;
+  transform-origin: top left;
+}
+
+.scoreText{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  z-index: 1000; /* Asegura que esté por encima de otros contenidos */
+}
+
+.malas {
+  color: red;
+  font-weight: bold;
+}
+
+.buenas {
+  color: green;
+  font-weight: bold;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #242424;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal button:first-of-type {
+  background-color: #007bff;
+  color: white;
+}
+
+.modal button:last-of-type {
+  background-color: #6c757d;
+  color: white;
+}
+
