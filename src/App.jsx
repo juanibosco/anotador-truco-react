@@ -9,9 +9,9 @@ function App() {
   });
 
   const [puntosEllos, setPuntosEllos] = useState(() => {
-    const saved = localStorage.getItem('puntosEllos');
+    const saved = localStorage.getItem('puntosEllos')
     return saved !== null ? JSON.parse(saved) : 0;
-  });
+  })
 
   const [ganador, setGanador] = useState(() => {
     const saved = localStorage.getItem('ganador');
