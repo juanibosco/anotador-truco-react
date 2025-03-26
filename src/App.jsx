@@ -185,7 +185,7 @@ function App() {
       {showModal && (
         <div className="modal-overlay">
           <div className="modal">
-            <p>¿Estás seguro de que deseas reiniciar la partida?</p>
+            <p>¿Estás seguro de que deseas reiniciar la partida??</p>
             <button onClick={reiniciarPartida}>Confirmar</button>
             <button onClick={() => setShowModal(false)}>Cancelar</button>
           </div>
