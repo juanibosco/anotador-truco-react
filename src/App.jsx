@@ -87,15 +87,16 @@ function App() {
       );
     }
 
-    cerillas.push(
-      <div className="cerilla-group" key="remaining">
-        {remainingCerillas >= 1 && <div className="cerilla cerilla1"></div>}
-        {remainingCerillas >= 2 && <div className="cerilla cerilla2"></div>}
-        {remainingCerillas >= 3 && <div className="cerilla cerilla3"></div>}
-        {remainingCerillas >= 4 && <div className="cerilla cerilla4"></div>}
-        {remainingCerillas === 5 && <div className="cerilla cerilla5"></div>}
-      </div>
-    );
+    if (remainingCerillas > 0) {
+      cerillas.push(
+        <div className="cerilla-group" key="remaining">
+          {remainingCerillas >= 1 && <div className="cerilla cerilla1"></div>}
+          {remainingCerillas >= 2 && <div className="cerilla cerilla2"></div>}
+          {remainingCerillas >= 3 && <div className="cerilla cerilla3"></div>}
+          {remainingCerillas >= 4 && <div className="cerilla cerilla4"></div>}
+        </div>
+      );
+    }
 
     return cerillas;
   };
